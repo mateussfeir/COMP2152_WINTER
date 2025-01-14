@@ -9,5 +9,5 @@ git push -u origin main
 
 (another way that worked in my mac:
 git add .      or     git add "name of the file"
-git commit -, "Write any comment"
+git commit -m "Write any comment"
 git push origin main)
