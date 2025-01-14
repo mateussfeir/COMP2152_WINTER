@@ -14,19 +14,22 @@
 # Add error handling on all inputs eg. if input is not int, print an error message and halt
 import random
 
-weapons = ["Fist", "Knife", "Club", "Gun", "Bomb", "Nuclear bomb"]
-weaponRoll = random.randint(1, 6)
-print(weapons[weaponRoll-1])
-if weaponRoll <=2:
-    print("You rolled a weak weapon, friend")
-    if weaponRoll-1 != 0:
+try:
+    weapons = ["Fist", "Knife", "Club", "Gun", "Bomb", "Nuclear bomb"]
+    weaponRoll = random.randint(1, 6)
+    print(weapons[weaponRoll-1])
+    if weaponRoll <=2:
+        print("You rolled a weak weapon, friend")
+        if weaponRoll-1 != 0:
+            print("Thank goodness you didn't roll the Fist...")
+    elif weaponRoll <=4:
+        print("Your weapon is meh")
         print("Thank goodness you didn't roll the Fist...")
-elif weaponRoll <=4:
-    print("Your weapon is meh")
-    print("Thank goodness you didn't roll the Fist...")
-else:
-    print("Nice weaon, friend!")
-    print("Thank goodness you didn't roll the Fist...")
+    else:
+        print("Nice weapon, friend!")
+        print("Thank goodness you didn't roll the Fist...")
+except Exception as e:
+    print("An error occurred:", e)
 
 
 
